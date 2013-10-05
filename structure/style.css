@@ -1,0 +1,42 @@
+body{
+	width: 600px;
+	margin: auto;
+}
+.form{
+	width: inherit;
+
+	background-color: #d3d3d3;
+	position:absolute;
+	top: 0;
+
+
+
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul li{
+	list-style: none;
+	margin: 0px;
+	margin-top: 20px;
+
+}
+label{
+	width:inherit;
+
+}
+.form input{
+	width: 100%;
+}
+.form textarea{
+	width: 100%;
+	height: 100px;
+}
+.close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}

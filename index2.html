@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events</title>
+	<link rel="stylesheet" type="text/css" href="day.css">
+	
+</head>
+<body>
+	<h1>my website</h1>
+	<button data-file="day">day</button>
+	<button data-file="night">Night</button>
+	<script src="jquery-1.10.2.js"></script>
+	<script>
+		(function(){
+			var link=$('link');
+			$('button').on('click',function(){
+				var $this=$(this),
+					stylesheet=$this.data('file');
+					console.log($this);
+					console.log(stylesheet);
+				link.attr("href",stylesheet + '.css');
+				$this.siblings('button')
+					 .removeAttr('disabled')
+					 .end()
+					 .attr('disabled','disabled');
+			
+			});
+		})();
+		</script>
+</body>
+</html>

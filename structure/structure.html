@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>structures</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+	
+		<h1>owner form!</h1>
+		<article>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur.
+		 Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt
+		 mollit anim id est laborum.<p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<div class="form">
+
+			<form action="" method="get">
+				<ul>
+				<li>
+				<label for="name">Name:</label>
+				<input type="text" name="name" />
+				</li>
+				<li>
+				<label for="email">Email:</label>
+				<input type="text" name="email" />
+				</li>
+				<li>
+				<label for="comments">whats up??</label>
+				<textarea name="comments" cols="40" rows="20" "></textarea>
+				</li>
+				<li>
+					<input type="submit" value="submit" />
+				</li>
+				</ul>
+			</form>
+		</div>
+		<script >
+		var article=$('article');
+		jQuery.fn.trigger=function(speed,easing,callback){
+		article.slideDown(500,function(){
+			article.delay(3000).slideUp(500);
+		});
+		};
+		article.hide();
+		$('h1').on('click',function(){
+			article.trigger();
+		});
+		var $form=$('form');
+		$('<button>click me</button>').appendTo('article');
+		$($form).hide();
+
+		$('button').on('click',function(){
+				$($form).show();
+
+				$('<button class="close">X</button>').appendTo($form);
+				});
+				$('button.close').on('click',function(){
+				$form.hide();
+				});
+			</script>
+	</body>
+</html>

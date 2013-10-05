@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="jquery-1.10.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">		
+</head>
+<body>
+	<dl>
+		<dt>what are you??</dt>
+		<dd>I am a student</dd>
+		<dt>what are you??</dt>
+		<dd>I am a student</dd>
+		<dt>what are you??</dt>
+		<dd>I am a student</dd>
+		<dt>what are you??</dt>
+		<dd>I am a student</dd>
+		<dt>what are you??</dt>
+		<dd>I am a student</dd>
+		<h1>click me</h1>
+		
+	</dl>
+	<script>
+	(function(){
+		$('dd').filter(':nth-child(n+4)').addClass('hide');
+		$('dl').on('mouseenter','dt', function(){
+			$(this).siblings('dd').slideUp(30).end()
+			.next().slideDown();
+			$('h1').bind('click',function(){
+				$(this).clone().appendTo('body');
+			})
+
+		});
+	})();
+	</script>
+</body>
+</html>
