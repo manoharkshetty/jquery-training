@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>slider</title>
+		<style type="text/css">
+		.container{
+			width: 320px;
+			margin-left: 50px;
+			
+		}
+		.slider{
+			padding-top: 50px;
+			width: inherit;
+			height:197px;
+				overflow: hidden;
+
+		}
+		.slider ul{
+			width:10000px;
+		
+			list-style: none;
+		}
+		.slider li{
+			float:left;
+		}
+		.button{
+
+			padding-right:50px;
+		}
+		
+			</style>
+		
+		
+	</head>
+	<body class="container">
+		 <div class="slider"> 
+			 <ul>
+			 	<li><img src="img/images.jpeg"></li>	
+			 	<li><img src="img/images2.jpeg"></li>
+			 	<li><img src="img/images3.jpeg"></li>
+			 
+			 	<li><img src="img/images4.jpeg"></li>
+			 </ul>
+		 </div>
+		 <button data-dir="prev">previous</button>
+		 <button data-dir="next">Next</button></li>
+		
+		
+		<script type="text/javascript"src="../jquery-1.10.2.js"></script>
+		 <script>
+		 var sliderUi=$('div.slider').children('ul'),
+		 	imgs=sliderUi.find('img'),
+		 	imgWidth=imgs.width(),
+		 	imglen=imgs.length,
+		 	cur=1;
+		 	totalLength=imglen*imgWidth;
+		 $('button').on('click',function(){
+		 	var dir=$(this).data('dir'),
+		 		loc=imgWidth;
+		 	(dir='next')?(++cur):(--cur);
+		 	if(cur===0){
+		 		cur=imglen;
+		 		dir=next;
+		 	} else if(cur-1===imglen){
+		 		cur=1;
+		 		loc=0;
+		 	}
+		 	transition(sliderUi,loc,dir);
+		 });
+		 function transition(){
+		 	sliderUi.animate({
+		 		'margin-left':'-=320'});
+		 	
+		 }
+
+		 </script>
+	</body>
+</html>

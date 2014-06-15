@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>twitter</title>
+	</head>
+	<body>
+		<h1>twitter posts<h1>
+	</body>
+	<script type="text/javascript"src="../jquery-1.10.2.js"></script>
+	<script type="text/javascript"src="http://cloud.github.com/downloads/wycats/Handdlebars-1.0.0.beta.js"></script>
+	<script>
+	(function(){
+		var Twitter={
+			this.url="https://twitter.com/search?q=tutspremium&src=typd&callback=?";
+			this.fetch();	
+		};
+		fetch:function(){
+				$.GETJSON(this.url,function(data){
+					console.log(data);
+						}
+				};
+		Twitter
+	})();
+	</script>
+</html>

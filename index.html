@@ -23,9 +23,15 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</article>
 		</ul>
+		</font>
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<script>
 			$("ul.emp").children('li').eq(1).text("added from jquery");
+			var arr=[1,2,3,4,5,6,7,8];
+			arr=$.grep(arr,function(val,index){
+				return val>5;
+			});
+			console.log(arr);
 		</script>
 	</body>
 </html>
